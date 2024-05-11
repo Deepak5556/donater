@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Alert Box</title>
+    <style>
+        /* Custom alert box styles */
+        .custom-alert {
+            background-color: #f44336; /* Red background */
+            color: white; /* White text color */
+            padding: 15px 20px; /* Padding */
+            border-radius: 5px; /* Rounded corners */
+            position: fixed; /* Fixed position */
+            bottom: 30px; /* 30px from the bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            display: none; /* Initially hidden */
+            z-index: 999; /* Set z-index to ensure it's on top of other elements */
+        }
+    </style>
+</head>
+<body>
+    <h2>Custom Alert Box Example</h2>
+    <button onclick="showAlert()">Show Alert</button>
+
+    <!-- Custom alert box element -->
+    <div id="customAlert" class="custom-alert">
+        <span>Error:</span> Incorrect email or password
+    </div>
+
+    <script>
+        // Function to show the custom alert box
+        function showAlert() {
+            var alertBox = document.getElementById("customAlert");
+            alertBox.style.display = "block"; // Display the alert box
+            setTimeout(function() {
+                alertBox.style.display = "none"; // Hide the alert box after 3 seconds
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+</body>
+</html>
